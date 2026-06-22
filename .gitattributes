@@ -1,5 +1,4 @@
-# GitHub dil istatistiklerini (Language stats) manipüle etmek için
-# TypeScript'in baskınlığını azaltıp Java ve Python'u öne çıkarıyoruz
-
-networking-app-next-main/** linguist-vendored=true
-linkedin-job-scraper/** linguist-vendored=true
+networking-app-next-main/* linguist-vendored
+networking-app-next-main/** linguist-vendored
+linkedin-job-scraper/* linguist-vendored
+linkedin-job-scraper/** linguist-vendored
