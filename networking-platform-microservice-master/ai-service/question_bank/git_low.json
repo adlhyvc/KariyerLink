@@ -1,0 +1,21 @@
+{
+  "technology": "git",
+  "level": "low",
+  "questions": [
+    {"id":"git_low_001","type":"concept","question":"What is Git?","code":null,"options":["A distributed version control system","A programming language","A text editor","A web server"],"correct":0,"explanation":"Git tracks file changes and enables collaboration."},
+    {"id":"git_low_002","type":"fill_blank","question":"Stage all changes:","code":"git ___ .","options":["add","stage","commit","push"],"correct":0,"explanation":"git add . stages all changes."},
+    {"id":"git_low_003","type":"output","question":"What does this do?","code":"git commit -m 'Fix bug'","options":["Creates a commit with message","Pushes to remote","Creates branch","Deletes files"],"correct":0,"explanation":"git commit saves staged changes locally."},
+    {"id":"git_low_004","type":"concept","question":"What is a branch?","code":null,"options":["A pointer to a commit for parallel development","A repo copy","A backup","A tag"],"correct":0,"explanation":"Branches let you work on features independently."},
+    {"id":"git_low_005","type":"output","question":"What does git status show?","code":null,"options":["Modified, staged, untracked files","Commit history","Remote URL","Branch list"],"correct":0,"explanation":"git status shows working directory state."},
+    {"id":"git_low_006","type":"fill_blank","question":"Create and switch to new branch:","code":"git ___ -b feature/login","options":["checkout","branch","switch","create"],"correct":0,"explanation":"git checkout -b creates and switches to a new branch."},
+    {"id":"git_low_007","type":"concept","question":"Difference between pull and fetch?","code":null,"options":["fetch downloads without merging; pull fetches AND merges","Identical","pull only downloads","fetch also merges"],"correct":0,"explanation":"pull = fetch + merge."},
+    {"id":"git_low_008","type":"output","question":"What does this show?","code":"git log --oneline -5","options":["Last 5 commits condensed","Last 5 files","5 branches","5 tags"],"correct":0,"explanation":"--oneline shows short format, -5 limits to 5."},
+    {"id":"git_low_009","type":"concept","question":"What does .gitignore do?","code":null,"options":["Specifies files Git should not track","Ignores commands","Blocks contributors","Hides repo"],"correct":0,"explanation":".gitignore excludes files like node_modules."},
+    {"id":"git_low_010","type":"fill_blank","question":"Merge a branch:","code":"git checkout main\ngit ___ feature/login","options":["merge","combine","join","integrate"],"correct":0,"explanation":"git merge integrates branch changes."},
+    {"id":"git_low_011","type":"concept","question":"What is a merge conflict?","code":null,"options":["Same lines modified in two branches","Branch deleted","Commit failed","Remote down"],"correct":0,"explanation":"Conflicts need manual resolution."},
+    {"id":"git_low_012","type":"output","question":"What does git clone do?","code":"git clone https://github.com/user/repo.git","options":["Creates local copy with full history","Creates empty repo","Uploads repo","Deletes repo"],"correct":0,"explanation":"git clone downloads the entire repository."},
+    {"id":"git_low_013","type":"concept","question":"What is the staging area?","code":null,"options":["Intermediate area before committing","Remote server","Working directory","Branch list"],"correct":0,"explanation":"Staging area prepares changes for commit."},
+    {"id":"git_low_014","type":"output","question":"What does git diff show?","code":null,"options":["Unstaged changes","All commits","Branch differences","Remote URL"],"correct":0,"explanation":"git diff shows modifications not yet staged."},
+    {"id":"git_low_015","type":"concept","question":"What does git push do?","code":null,"options":["Uploads local commits to remote","Downloads changes","Creates branch","Deletes commits"],"correct":0,"explanation":"git push sends commits to the remote repository."}
+  ]
+}

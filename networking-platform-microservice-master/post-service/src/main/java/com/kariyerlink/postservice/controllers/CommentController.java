@@ -1,0 +1,37 @@
+package com.kariyerlink.postservice.controllers;
+
+import com.kariyerlink.postservice.dtos.requests.CommentAddRequest;
+import com.kariyerlink.postservice.dtos.respones.CommentResponse;
+import com.kariyerlink.postservice.services.CommentService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.UUID;
+
+@RestController
+@RequestMapping("/comments")
+public class CommentController {
+    private final CommentService commentService;
+
+    public CommentController(CommentService commentService){
+        this.commentService = commentService;
+    }
+
+    @PostMapping
+    public ResponseEntity<String> add(@RequestBody CommentAddRequest commentAddRequest){
+        this.commentService.add(commentAddRequest);
+        return ResponseEntity.ok().body("Comment Added");
+    }
+
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<CommentResponse>> getByUser(@PathVariable UUID userId){
+        return ResponseEntity.ok().body(this.commentService.getByUser(userId));
+    }
+
+    @GetMapping("/post/{postId}")
+    public ResponseEntity<List<CommentResponse>> getByPost(@PathVariable UUID postId){
+        return ResponseEntity.ok().body(this.commentService.getByPost(postId));
+    }
+
+}

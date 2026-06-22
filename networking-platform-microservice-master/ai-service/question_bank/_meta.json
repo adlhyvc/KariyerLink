@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "description": "Quiz question bank for KariyerLink job platform",
+  "questions_per_file": 15,
+  "levels": ["low", "high"],
+  "available_technologies": [
+    "python", "java", "javascript", "typescript", "react",
+    "nodejs", "spring", "postgresql", "docker", "git"
+  ],
+  "planned_technologies": [
+    "angular", "vue", "css", "html", "mongodb", "aws",
+    "kubernetes", "django", "flask", "fastapi", "c++", "c#",
+    "go", "rust", "ruby", "php", "swift", "kotlin"
+  ],
+  "question_types": ["output", "bug", "concept", "fill_blank"]
+}

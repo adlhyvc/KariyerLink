@@ -1,0 +1,74 @@
+# ========================
+# Dependencies
+# ========================
+node_modules/
+package-lock.json
+
+# ========================
+# Build Outputs
+# ========================
+.next/
+dist/
+output/
+target/
+build/
+out/
+
+# ========================
+# IDE & Editor
+# ========================
+.idea/
+.cursor/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# ========================
+# Environment & Secrets
+# ========================
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# ========================
+# OS Generated
+# ========================
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# ========================
+# Temporary Files
+# ========================
+~$*
+__pycache__/
+*.pyc
+*.pyo
+
+# ========================
+# Academic Deliverables
+# ========================
+deliverables/
+
+# ========================
+# Debug & Data Files
+# ========================
+debug-*.txt
+error-screenshot.png
+seed-data.sql
+dump.ts
+*.sql
+
+# ========================
+# Java / Maven
+# ========================
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+*.log

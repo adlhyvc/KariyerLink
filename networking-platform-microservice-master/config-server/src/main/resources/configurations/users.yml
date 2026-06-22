@@ -1,0 +1,27 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+  registration:
+    enabled: true
+    preferIpAddress: true
+
+server:
+  port: 8020
+
+spring:
+  application:
+    name: users
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://db:5432/microservices-users
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  secret: mysupersecretkeymysupersecretkeymysupersecretkey

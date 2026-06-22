@@ -1,0 +1,191 @@
+{
+  "technology": "javascript",
+  "level": "high",
+  "questions": [
+    {
+      "id": "js_high_001",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "console.log(1);\nsetTimeout(() => console.log(2), 0);\nPromise.resolve().then(() => console.log(3));\nconsole.log(4);",
+      "options": ["1 2 3 4", "1 4 3 2", "1 4 2 3", "1 3 4 2"],
+      "correct": 1,
+      "explanation": "Event loop: sync (1, 4), microtask queue (Promise → 3), macrotask queue (setTimeout → 2)."
+    },
+    {
+      "id": "js_high_002",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "const obj = {\n    name: 'Alice',\n    greet: () => {\n        console.log(`Hello ${this.name}`);\n    }\n};\nobj.greet();",
+      "options": ["Hello Alice", "Hello undefined", "Hello", "Error"],
+      "correct": 1,
+      "explanation": "Arrow functions don't have their own 'this'. In a module/strict context, this.name is undefined."
+    },
+    {
+      "id": "js_high_003",
+      "type": "concept",
+      "question": "What is the purpose of WeakMap in JavaScript?",
+      "code": null,
+      "options": [
+        "Holds weak references to keys — allows garbage collection when no other references exist",
+        "A Map that is slower but uses less memory",
+        "A Map that only accepts string keys",
+        "A deprecated version of Map"
+      ],
+      "correct": 0,
+      "explanation": "WeakMap keys are held weakly; if no other reference to the key exists, it can be garbage collected."
+    },
+    {
+      "id": "js_high_004",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "function* gen() {\n    yield 1;\n    yield 2;\n    yield 3;\n}\nconst g = gen();\nconsole.log(g.next().value);\nconsole.log(g.next().value);\nconsole.log(g.next().value);\nconsole.log(g.next().done);",
+      "options": [
+        "1, 2, 3, true",
+        "1, 2, 3, false",
+        "undefined, undefined, undefined, true",
+        "Error"
+      ],
+      "correct": 0,
+      "explanation": "Generator yields 1, 2, 3 sequentially. After the last yield, next() returns {value: undefined, done: true}."
+    },
+    {
+      "id": "js_high_005",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "const proxy = new Proxy({}, {\n    get(target, prop) {\n        return prop in target ? target[prop] : 42;\n    }\n});\nproxy.x = 10;\nconsole.log(proxy.x);\nconsole.log(proxy.y);",
+      "options": ["10, 42", "10, undefined", "42, 42", "Error"],
+      "correct": 0,
+      "explanation": "Proxy intercepts get: x exists (returns 10), y doesn't exist (returns default 42)."
+    },
+    {
+      "id": "js_high_006",
+      "type": "bug",
+      "question": "What is the issue with this async code?",
+      "code": "async function fetchAll(urls) {\n    const results = [];\n    for (const url of urls) {\n        const res = await fetch(url);\n        results.push(await res.json());\n    }\n    return results;\n}",
+      "options": [
+        "Sequential awaits — requests are made one at a time instead of in parallel (should use Promise.all)",
+        "fetch() doesn't support async/await",
+        "results array will be empty",
+        "No issue, this is correct"
+      ],
+      "correct": 0,
+      "explanation": "Each fetch waits for the previous to complete. Promise.all(urls.map(url => fetch(url))) runs them in parallel."
+    },
+    {
+      "id": "js_high_007",
+      "type": "concept",
+      "question": "What is the 'temporal dead zone' in JavaScript?",
+      "code": null,
+      "options": [
+        "The period between entering scope and the let/const declaration where the variable cannot be accessed",
+        "A performance optimization technique",
+        "The time between setTimeout calls",
+        "A zone where garbage collection occurs"
+      ],
+      "correct": 0,
+      "explanation": "Variables declared with let/const exist in a TDZ from block start until their declaration line — accessing them throws ReferenceError."
+    },
+    {
+      "id": "js_high_008",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "const arr = [1, [2, [3, [4]]], 5];\nconsole.log(arr.flat(Infinity));",
+      "options": [
+        "[1, 2, 3, 4, 5]",
+        "[1, [2, [3, [4]]], 5]",
+        "[1, 2, [3, [4]], 5]",
+        "Error"
+      ],
+      "correct": 0,
+      "explanation": "flat(Infinity) recursively flattens all nested arrays to a single level."
+    },
+    {
+      "id": "js_high_009",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "class Animal {\n    #name;\n    constructor(name) { this.#name = name; }\n    getName() { return this.#name; }\n}\nconst a = new Animal('Dog');\nconsole.log(a.getName());\nconsole.log(a.#name);",
+      "options": [
+        "Dog then Dog",
+        "Dog then Error",
+        "undefined then Error",
+        "Error on both"
+      ],
+      "correct": 1,
+      "explanation": "#name is a private field. Accessible inside the class via getName(), but a.#name throws SyntaxError outside."
+    },
+    {
+      "id": "js_high_010",
+      "type": "concept",
+      "question": "What is the difference between Object.freeze() and Object.seal()?",
+      "code": null,
+      "options": [
+        "freeze prevents all changes; seal prevents adding/removing but allows modifying existing properties",
+        "They are identical",
+        "seal prevents all changes; freeze only prevents adding",
+        "freeze is deep, seal is shallow"
+      ],
+      "correct": 0,
+      "explanation": "freeze: no add, no remove, no modify. seal: no add, no remove, but CAN modify existing property values."
+    },
+    {
+      "id": "js_high_011",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "const sym = Symbol('id');\nconst obj = { [sym]: 42, name: 'test' };\nconsole.log(Object.keys(obj));",
+      "options": ["['id', 'name']", "['name']", "[Symbol(id), 'name']", "[]"],
+      "correct": 1,
+      "explanation": "Symbol-keyed properties are not enumerable via Object.keys(). Only string keys are returned."
+    },
+    {
+      "id": "js_high_012",
+      "type": "fill_blank",
+      "question": "Fill in the blank to properly handle promise rejection:",
+      "code": "async function safeFetch(url) {\n    try {\n        const res = await fetch(url);\n        return await res.json();\n    } ___ (error) {\n        console.error('Failed:', error);\n        return null;\n    }\n}",
+      "options": ["catch", "except", "handle", "error"],
+      "correct": 0,
+      "explanation": "JavaScript uses try/catch for error handling, including with async/await."
+    },
+    {
+      "id": "js_high_013",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "const target = { a: 1, b: 2 };\nconst source = { b: 3, c: 4 };\nconst result = Object.assign({}, target, source);\nconsole.log(result);",
+      "options": [
+        "{a: 1, b: 3, c: 4}",
+        "{a: 1, b: 2, c: 4}",
+        "{b: 3, c: 4}",
+        "Error"
+      ],
+      "correct": 0,
+      "explanation": "Object.assign merges into {}. source's b=3 overwrites target's b=2."
+    },
+    {
+      "id": "js_high_014",
+      "type": "concept",
+      "question": "What does 'structuredClone()' do in modern JavaScript?",
+      "code": null,
+      "options": [
+        "Creates a deep copy of an object, including nested objects and arrays",
+        "Creates a shallow copy",
+        "Validates object structure",
+        "Converts an object to JSON"
+      ],
+      "correct": 0,
+      "explanation": "structuredClone() performs a deep clone, handling circular references, Maps, Sets, Dates, etc."
+    },
+    {
+      "id": "js_high_015",
+      "type": "bug",
+      "question": "What is the memory issue with this code?",
+      "code": "function createHandler() {\n    const largeData = new Array(1000000).fill('data');\n    return function handler(event) {\n        console.log('Event:', event.type);\n    };\n}\nconst handler = createHandler();\ndocument.addEventListener('click', handler);",
+      "options": [
+        "Closure retains reference to largeData even though handler never uses it — memory leak",
+        "addEventListener doesn't work with closures",
+        "handler function is too large",
+        "No issue"
+      ],
+      "correct": 0,
+      "explanation": "The closure captures largeData in its scope even though it's never used. The engine may not optimize it away, causing a memory leak."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "python": {
+    "low": {
+      "concepts": ["Variables & data types", "Lists, tuples, dictionaries, sets", "Loops (for, while) and conditionals", "Functions and parameters", "String manipulation", "File I/O basics", "Exception handling (try/except)", "List comprehensions", "Modules and imports", "Basic OOP (classes, objects)"],
+      "tools": ["pip", "virtualenv / venv", "VS Code / PyCharm", "Jupyter Notebook", "Python REPL"],
+      "typical_tasks": ["Writing scripts for automation", "Data parsing and file processing", "Building simple APIs", "Unit testing with pytest", "Working with JSON/CSV data"],
+      "resources": [{"title": "Python Official Tutorial", "url": "https://docs.python.org/3/tutorial/"}, {"title": "Automate the Boring Stuff", "url": "https://automatetheboringstuff.com/"}]
+    },
+    "high": {
+      "concepts": ["Decorators and closures", "Generators and iterators", "Context managers", "Metaclasses", "Async/await and asyncio", "GIL and concurrency", "Design patterns in Python", "Memory management", "Type hints and mypy", "C extensions and ctypes"],
+      "tools": ["Poetry / PDM", "mypy", "black / ruff", "profiling (cProfile, line_profiler)", "Docker for deployment"],
+      "typical_tasks": ["System architecture design", "Performance optimization and profiling", "Building distributed systems", "Code review and mentoring", "CI/CD pipeline design", "Open source contribution"],
+      "resources": [{"title": "Fluent Python (book)", "url": "https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/"}, {"title": "Python Design Patterns", "url": "https://refactoring.guru/design-patterns/python"}]
+    }
+  },
+  "java": {
+    "low": {
+      "concepts": ["OOP fundamentals (classes, inheritance, polymorphism)", "Collections framework (List, Map, Set)", "Exception handling", "Interfaces and abstract classes", "Generics basics", "Lambda expressions", "Streams API basics", "File I/O", "String handling", "Basic multithreading"],
+      "tools": ["Maven / Gradle", "IntelliJ IDEA / Eclipse", "JUnit", "Git", "Postman"],
+      "typical_tasks": ["Building REST APIs with Spring Boot", "Database CRUD operations with JPA", "Writing unit tests", "Debugging and logging", "Working with JSON (Jackson)"],
+      "resources": [{"title": "Java Official Tutorials", "url": "https://docs.oracle.com/javase/tutorial/"}, {"title": "Baeldung Spring Tutorials", "url": "https://www.baeldung.com/"}]
+    },
+    "high": {
+      "concepts": ["JVM internals and garbage collection", "Concurrency (CompletableFuture, locks, atomic)", "Design patterns (GoF)", "Microservices architecture", "Reactive programming (WebFlux)", "JPA/Hibernate optimization (N+1, caching)", "Security (Spring Security, OAuth2)", "Records, sealed classes (modern Java)", "Module system (JPMS)", "Profiling and performance tuning"],
+      "tools": ["Spring Cloud ecosystem", "Docker & Kubernetes", "Kafka / RabbitMQ", "JProfiler / VisualVM", "SonarQube", "Resilience4j"],
+      "typical_tasks": ["Architecture design and tech leadership", "Performance optimization", "Building event-driven systems", "CI/CD pipeline implementation", "Security audit and implementation", "Team mentoring and code review"],
+      "resources": [{"title": "Effective Java (book)", "url": "https://www.oreilly.com/library/view/effective-java/9780134686097/"}, {"title": "Spring Cloud Documentation", "url": "https://spring.io/cloud"}]
+    }
+  },
+  "javascript": {
+    "low": {
+      "concepts": ["Variables (let, const, var)", "Functions and arrow functions", "DOM manipulation", "Event handling", "Promises and async/await", "Array methods (map, filter, reduce)", "Template literals", "Destructuring", "Spread/rest operators", "Error handling"],
+      "tools": ["Node.js / npm", "Chrome DevTools", "VS Code", "ESLint", "Prettier"],
+      "typical_tasks": ["Building interactive web pages", "Fetching data from APIs", "Form validation", "DOM event handling", "Basic testing"],
+      "resources": [{"title": "MDN JavaScript Guide", "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"}, {"title": "JavaScript.info", "url": "https://javascript.info/"}]
+    },
+    "high": {
+      "concepts": ["Event loop and microtasks", "Closures and scope chain", "Prototypal inheritance", "Proxy and Reflect", "WeakMap/WeakSet and memory management", "Web Workers and SharedArrayBuffer", "Module systems (ESM vs CJS)", "Generators and iterators", "Symbol and well-known symbols", "Performance optimization"],
+      "tools": ["Webpack / Vite / esbuild", "TypeScript", "Testing (Jest, Vitest)", "Monitoring (Sentry)", "Bundler analyzers"],
+      "typical_tasks": ["Architecture decisions", "Performance profiling and optimization", "Building custom frameworks/libraries", "Security auditing (XSS, CSRF)", "Bundle optimization", "Mentoring team members"],
+      "resources": [{"title": "You Don't Know JS (book series)", "url": "https://github.com/getify/You-Dont-Know-JS"}, {"title": "V8 Blog", "url": "https://v8.dev/blog"}]
+    }
+  },
+  "typescript": {
+    "low": {
+      "concepts": ["Type annotations", "Interfaces and types", "Enums", "Union and intersection types", "Optional properties", "Generics basics", "Type narrowing", "Utility types (Partial, Required, Pick)", "Module imports/exports", "tsconfig.json basics"],
+      "tools": ["tsc (TypeScript compiler)", "VS Code with TS support", "ts-node", "ESLint with TS plugin", "Prettier"],
+      "typical_tasks": ["Adding types to JavaScript projects", "Defining API response types", "Creating typed React components", "Type-safe form handling", "Working with third-party type definitions (@types/)"],
+      "resources": [{"title": "TypeScript Handbook", "url": "https://www.typescriptlang.org/docs/handbook/"}, {"title": "TypeScript Playground", "url": "https://www.typescriptlang.org/play"}]
+    },
+    "high": {
+      "concepts": ["Conditional types and infer", "Mapped types", "Template literal types", "Discriminated unions", "Declaration merging", "Module augmentation", "Covariance and contravariance", "Recursive types", "satisfies operator", "Type-level programming"],
+      "tools": ["ts-morph", "Type testing (tsd, expect-type)", "Custom ESLint rules", "SWC / esbuild for fast compilation"],
+      "typical_tasks": ["Designing type-safe libraries and SDKs", "Creating complex generic utilities", "Type system architecture", "Migration strategies (JS to TS)", "Performance tuning compilation"],
+      "resources": [{"title": "Type Challenges", "url": "https://github.com/type-challenges/type-challenges"}, {"title": "Matt Pocock's Total TypeScript", "url": "https://www.totaltypescript.com/"}]
+    }
+  },
+  "react": {
+    "low": {
+      "concepts": ["JSX syntax", "Components and props", "useState and useEffect", "Event handling", "Conditional rendering", "Lists and keys", "Forms and controlled components", "Component composition", "Basic routing", "CSS modules / styled-components"],
+      "tools": ["Create React App / Vite", "React DevTools", "npm / yarn", "VS Code with React extensions", "Postman (API testing)"],
+      "typical_tasks": ["Building UI components", "Fetching data from APIs", "Form handling and validation", "State management basics", "Responsive layouts"],
+      "resources": [{"title": "React Official Tutorial", "url": "https://react.dev/learn"}, {"title": "freeCodeCamp React Course", "url": "https://www.freecodecamp.org/learn/front-end-development-libraries/#react"}]
+    },
+    "high": {
+      "concepts": ["Custom hooks", "Context API and useReducer patterns", "React.memo, useMemo, useCallback optimization", "Server Components and Suspense", "Concurrent features (useTransition)", "Error boundaries", "Compound component pattern", "Render props and HOC patterns", "Virtual DOM reconciliation (Fiber)", "Testing strategies"],
+      "tools": ["Next.js / Remix", "React Query / TanStack", "Storybook", "Testing Library / Cypress", "Zustand / Jotai / Recoil"],
+      "typical_tasks": ["Frontend architecture design", "Performance optimization", "Component library development", "Code review and best practices", "CI/CD for frontend", "Mentoring junior developers"],
+      "resources": [{"title": "Patterns.dev - React Patterns", "url": "https://www.patterns.dev/react"}, {"title": "Kent C. Dodds Blog", "url": "https://kentcdodds.com/blog"}]
+    }
+  },
+  "nodejs": {
+    "low": {
+      "concepts": ["Event loop basics", "Modules (require / import)", "npm and package.json", "Express.js basics", "Middleware concept", "File system (fs module)", "Environment variables", "Error handling", "REST API design", "Basic authentication"],
+      "tools": ["Express.js", "Postman", "nodemon", "dotenv", "VS Code debugger"],
+      "typical_tasks": ["Building REST APIs", "Database CRUD with an ORM", "File upload/download", "JWT authentication", "Input validation"],
+      "resources": [{"title": "Node.js Official Docs", "url": "https://nodejs.org/en/docs"}, {"title": "Express.js Guide", "url": "https://expressjs.com/en/guide/routing.html"}]
+    },
+    "high": {
+      "concepts": ["Event loop internals (libuv phases)", "Streams and backpressure", "Worker threads and cluster module", "Memory management (V8 heap)", "Graceful shutdown", "Security best practices", "Performance profiling", "Microservices communication", "WebSocket / Server-Sent Events", "CommonJS vs ESM internals"],
+      "tools": ["PM2 / Docker", "Kafka / RabbitMQ", "Redis", "Prometheus / Grafana", "clinic.js / 0x profiler"],
+      "typical_tasks": ["Architecture design", "Performance optimization", "Building real-time systems", "CI/CD pipeline setup", "Security auditing", "Managing production deployments"],
+      "resources": [{"title": "Node.js Best Practices", "url": "https://github.com/goldbergyoni/nodebestpractices"}, {"title": "Node.js Design Patterns (book)", "url": "https://www.nodejsdesignpatterns.com/"}]
+    }
+  },
+  "spring": {
+    "low": {
+      "concepts": ["Dependency injection", "Spring Boot auto-configuration", "REST controllers", "JPA/Hibernate basics", "application.properties/yml", "Bean lifecycle", "Spring profiles", "Validation annotations", "Exception handling (@ControllerAdvice)", "Spring Security basics"],
+      "tools": ["Maven / Gradle", "Spring Initializr", "Postman", "H2 Database", "IntelliJ IDEA"],
+      "typical_tasks": ["Building REST APIs", "CRUD operations with JPA", "Database migrations", "Basic authentication/authorization", "Unit and integration testing"],
+      "resources": [{"title": "Spring Boot Reference", "url": "https://docs.spring.io/spring-boot/docs/current/reference/html/"}, {"title": "Baeldung", "url": "https://www.baeldung.com/"}]
+    },
+    "high": {
+      "concepts": ["Spring AOP and proxy mechanism", "Transaction management internals", "Spring Cloud (Config, Gateway, Circuit Breaker)", "Reactive (WebFlux, R2DBC)", "Caching strategies", "Event-driven architecture", "Custom auto-configuration", "Spring Security OAuth2/OIDC", "Microservice patterns (Saga, CQRS)", "Observability (Micrometer, Sleuth)"],
+      "tools": ["Spring Cloud ecosystem", "Docker & Kubernetes", "Kafka / RabbitMQ", "Prometheus / Grafana", "Resilience4j", "Testcontainers"],
+      "typical_tasks": ["Microservice architecture design", "Performance tuning and caching", "Building event-driven systems", "Security architecture", "CI/CD and deployment strategies", "Team leadership"],
+      "resources": [{"title": "Spring Cloud Documentation", "url": "https://spring.io/cloud"}, {"title": "Microservices Patterns (book)", "url": "https://microservices.io/patterns/"}]
+    }
+  },
+  "postgresql": {
+    "low": {
+      "concepts": ["SQL basics (SELECT, INSERT, UPDATE, DELETE)", "WHERE and filtering", "JOINs (INNER, LEFT, RIGHT)", "GROUP BY and aggregations", "ORDER BY and LIMIT", "Primary and foreign keys", "Indexes basics", "Data types", "NULL handling", "Basic constraints"],
+      "tools": ["pgAdmin", "psql CLI", "DBeaver", "DataGrip", "pg_dump for backups"],
+      "typical_tasks": ["Writing CRUD queries", "Designing simple schemas", "Basic reporting queries", "Data import/export", "Database setup and configuration"],
+      "resources": [{"title": "PostgreSQL Official Tutorial", "url": "https://www.postgresql.org/docs/current/tutorial.html"}, {"title": "SQLBolt Interactive Tutorial", "url": "https://sqlbolt.com/"}]
+    },
+    "high": {
+      "concepts": ["Window functions", "CTEs and recursive queries", "EXPLAIN ANALYZE and query optimization", "Index types (B-tree, GIN, GiST, BRIN)", "Partitioning strategies", "MVCC and transaction isolation", "JSONB operations", "Full-text search", "Materialized views", "Replication (logical/physical)"],
+      "tools": ["pg_stat_statements", "pgBouncer", "Patroni / repmgr", "TimescaleDB", "PostGIS"],
+      "typical_tasks": ["Query performance optimization", "Schema design for scale", "Replication and HA setup", "Backup and recovery planning", "Monitoring and alerting", "Database migration strategies"],
+      "resources": [{"title": "Use The Index, Luke", "url": "https://use-the-index-luke.com/"}, {"title": "PostgreSQL Wiki Performance", "url": "https://wiki.postgresql.org/wiki/Performance_Optimization"}]
+    }
+  },
+  "docker": {
+    "low": {
+      "concepts": ["Images and containers", "Dockerfile basics", "Docker commands (run, build, ps, logs)", "Port mapping", "Volumes", "Environment variables", "Docker Compose basics", ".dockerignore", "Docker Hub", "Container lifecycle"],
+      "tools": ["Docker Desktop", "Docker Compose", "Docker Hub", "VS Code Docker extension", "Portainer"],
+      "typical_tasks": ["Containerizing applications", "Writing Dockerfiles", "Multi-container setups with Compose", "Managing volumes for persistence", "Debugging container issues"],
+      "resources": [{"title": "Docker Getting Started", "url": "https://docs.docker.com/get-started/"}, {"title": "Docker Curriculum", "url": "https://docker-curriculum.com/"}]
+    },
+    "high": {
+      "concepts": ["Multi-stage builds", "Layer caching optimization", "Security (non-root, read-only, secrets)", "Networking (bridge, overlay, host)", "Health checks", "Resource limits (cgroups)", "Namespaces and isolation", "BuildKit features", "Container orchestration concepts", "Image scanning and signing"],
+      "tools": ["Docker Swarm / Kubernetes", "Trivy / Snyk (security scanning)", "Buildx (multi-arch)", "Dive (layer analysis)", "Harbor (registry)"],
+      "typical_tasks": ["Production Dockerfile optimization", "CI/CD pipeline integration", "Security hardening", "Multi-arch builds", "Orchestration setup", "Monitoring containerized apps"],
+      "resources": [{"title": "Docker Best Practices", "url": "https://docs.docker.com/develop/develop-images/dockerfile_best-practices/"}, {"title": "Container Security (book)", "url": "https://www.oreilly.com/library/view/container-security/9781492056690/"}]
+    }
+  },
+  "git": {
+    "low": {
+      "concepts": ["Repositories (init, clone)", "Staging and committing", "Branching and merging", "Remote repositories (push, pull, fetch)", "Merge conflicts", ".gitignore", "Git log and diff", "Tags", "Stashing", "Basic collaboration workflow"],
+      "tools": ["GitHub / GitLab / Bitbucket", "Git CLI", "VS Code Git integration", "GitHub Desktop", "GitKraken"],
+      "typical_tasks": ["Daily commit workflow", "Feature branch development", "Pull request creation", "Resolving merge conflicts", "Maintaining clean commit history"],
+      "resources": [{"title": "Pro Git Book", "url": "https://git-scm.com/book/en/v2"}, {"title": "Learn Git Branching", "url": "https://learngitbranching.js.org/"}]
+    },
+    "high": {
+      "concepts": ["Interactive rebase", "Cherry-pick", "Reflog and recovery", "Git bisect", "Hooks (pre-commit, pre-push)", "Submodules and subtrees", "Worktrees", "Rebase vs merge strategies", "Git internals (objects, refs, packfiles)", "Monorepo strategies"],
+      "tools": ["Husky (Git hooks)", "Conventional Commits", "Commitlint", "Git LFS", "GitHub Actions / GitLab CI"],
+      "typical_tasks": ["Git workflow design (GitFlow, trunk-based)", "Release management and tagging", "CI/CD integration", "Repository maintenance", "Team workflow enforcement", "Monorepo management"],
+      "resources": [{"title": "Pro Git - Internals", "url": "https://git-scm.com/book/en/v2/Git-Internals-Plumbing-and-Porcelain"}, {"title": "Conventional Commits", "url": "https://www.conventionalcommits.org/"}]
+    }
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "technology": "javascript",
+  "level": "low",
+  "questions": [
+    {
+      "id": "js_low_001",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "console.log(typeof null);",
+      "options": ["null", "object", "undefined", "boolean"],
+      "correct": 1,
+      "explanation": "This is a famous JavaScript quirk. typeof null returns 'object' due to a legacy bug."
+    },
+    {
+      "id": "js_low_002",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "let x = '5' + 3;\nconsole.log(x);",
+      "options": ["8", "53", "Error", "undefined"],
+      "correct": 1,
+      "explanation": "The + operator with a string performs concatenation: '5' + 3 = '53'."
+    },
+    {
+      "id": "js_low_003",
+      "type": "concept",
+      "question": "What is the difference between 'let' and 'var' in JavaScript?",
+      "code": null,
+      "options": [
+        "let is block-scoped, var is function-scoped",
+        "They are identical",
+        "var is block-scoped, let is function-scoped",
+        "let is deprecated"
+      ],
+      "correct": 0,
+      "explanation": "let respects block scope (if, for, etc.), while var is scoped to the nearest function."
+    },
+    {
+      "id": "js_low_004",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "console.log(0.1 + 0.2 === 0.3);",
+      "options": ["true", "false", "Error", "undefined"],
+      "correct": 1,
+      "explanation": "Floating-point precision: 0.1 + 0.2 = 0.30000000000000004, which is not exactly 0.3."
+    },
+    {
+      "id": "js_low_005",
+      "type": "bug",
+      "question": "What is wrong with this code?",
+      "code": "const arr = [1, 2, 3];\narr = [4, 5, 6];",
+      "options": [
+        "Cannot reassign a const variable",
+        "Arrays can't be const",
+        "Missing semicolon",
+        "No error"
+      ],
+      "correct": 0,
+      "explanation": "const prevents reassignment of the variable. You can modify array contents (push, pop) but not reassign it."
+    },
+    {
+      "id": "js_low_006",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "const arr = [1, 2, 3, 4, 5];\nconst result = arr.filter(n => n > 3);\nconsole.log(result);",
+      "options": ["[4, 5]", "[1, 2, 3]", "[3, 4, 5]", "[5]"],
+      "correct": 0,
+      "explanation": "filter() returns elements that satisfy the condition n > 3, which are 4 and 5."
+    },
+    {
+      "id": "js_low_007",
+      "type": "concept",
+      "question": "What does '===' do differently from '==' in JavaScript?",
+      "code": null,
+      "options": [
+        "=== checks type and value, == only checks value with type coercion",
+        "They are identical",
+        "=== is for strings only",
+        "== is strict comparison"
+      ],
+      "correct": 0,
+      "explanation": "=== (strict equality) checks both type and value. == (loose) converts types before comparing."
+    },
+    {
+      "id": "js_low_008",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "const obj = { a: 1, b: 2, c: 3 };\nconsole.log(Object.keys(obj));",
+      "options": ["[1, 2, 3]", "['a', 'b', 'c']", "{a, b, c}", "Error"],
+      "correct": 1,
+      "explanation": "Object.keys() returns an array of the object's own enumerable property names."
+    },
+    {
+      "id": "js_low_009",
+      "type": "fill_blank",
+      "question": "Fill in the blank to destructure an object:",
+      "code": "const person = { name: 'Ali', age: 25 };\nconst ___ = person;\nconsole.log(name);",
+      "options": ["{ name }", "[name]", "(name)", "name"],
+      "correct": 0,
+      "explanation": "Object destructuring uses curly braces: const { name } = person;"
+    },
+    {
+      "id": "js_low_010",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "let a = [1, 2, 3];\nlet b = [...a, 4, 5];\nconsole.log(b.length);",
+      "options": ["3", "5", "6", "Error"],
+      "correct": 1,
+      "explanation": "Spread operator copies all elements from a, then adds 4 and 5. Total: 5 elements."
+    },
+    {
+      "id": "js_low_011",
+      "type": "concept",
+      "question": "What is a callback function in JavaScript?",
+      "code": null,
+      "options": [
+        "A function passed as an argument to another function",
+        "A function that calls itself",
+        "A function that returns a value",
+        "A function defined with the callback keyword"
+      ],
+      "correct": 0,
+      "explanation": "Callbacks are functions passed to other functions to be executed later, commonly used in async operations."
+    },
+    {
+      "id": "js_low_012",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "const nums = [1, 2, 3];\nconst doubled = nums.map(n => n * 2);\nconsole.log(doubled);",
+      "options": ["[1, 2, 3]", "[2, 4, 6]", "[1, 4, 9]", "6"],
+      "correct": 1,
+      "explanation": "map() transforms each element: 1*2=2, 2*2=4, 3*2=6."
+    },
+    {
+      "id": "js_low_013",
+      "type": "bug",
+      "question": "What is the issue with this code?",
+      "code": "function greet(name) {\n    console.log('Hello ' + name);\n}\n\ngreet();",
+      "options": [
+        "name will be undefined — no argument passed",
+        "Syntax error in function definition",
+        "console.log doesn't accept concatenation",
+        "No error — prints 'Hello'"
+      ],
+      "correct": 0,
+      "explanation": "Calling greet() without an argument makes name=undefined, printing 'Hello undefined'."
+    },
+    {
+      "id": "js_low_014",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "console.log(Boolean(0));\nconsole.log(Boolean(''));\nconsole.log(Boolean('0'));",
+      "options": [
+        "false, false, true",
+        "false, false, false",
+        "true, true, true",
+        "false, true, false"
+      ],
+      "correct": 0,
+      "explanation": "0 and '' are falsy. '0' is a non-empty string, which is truthy."
+    },
+    {
+      "id": "js_low_015",
+      "type": "fill_blank",
+      "question": "Fill in the blank to create a promise:",
+      "code": "const myPromise = new ___(function(resolve, reject) {\n    resolve('Success!');\n});",
+      "options": ["Promise", "Async", "Await", "Callback"],
+      "correct": 0,
+      "explanation": "Promises are created using new Promise() constructor with resolve and reject callbacks."
+    }
+  ]
+}

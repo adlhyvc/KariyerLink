@@ -1,0 +1,156 @@
+{
+  "technology": "python",
+  "level": "low",
+  "questions": [
+    {
+      "id": "py_low_001",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "x = [1, 2, 3, 4, 5]\nprint(x[-2])",
+      "options": ["5", "4", "3", "Error"],
+      "correct": 1,
+      "explanation": "Negative indexing: x[-2] is the second-to-last element, which is 4."
+    },
+    {
+      "id": "py_low_002",
+      "type": "bug",
+      "question": "What is wrong with this code?",
+      "code": "def add(a, b):\n    return a + b\n\nresult = add(5)\nprint(result)",
+      "options": [
+        "Missing second argument in function call",
+        "return statement is wrong",
+        "print function syntax error",
+        "No error"
+      ],
+      "correct": 0,
+      "explanation": "add() requires 2 arguments but only 1 was provided."
+    },
+    {
+      "id": "py_low_003",
+      "type": "concept",
+      "question": "Which of the following is a mutable data type in Python?",
+      "code": null,
+      "options": ["tuple", "str", "list", "frozenset"],
+      "correct": 2,
+      "explanation": "Lists are mutable — you can add, remove, or change elements after creation."
+    },
+    {
+      "id": "py_low_004",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "name = 'Python'\nprint(name[0:3])",
+      "options": ["Pyt", "Pyth", "Python", "P"],
+      "correct": 0,
+      "explanation": "Slicing [0:3] returns characters at index 0, 1, 2 — 'Pyt'."
+    },
+    {
+      "id": "py_low_005",
+      "type": "concept",
+      "question": "What does the 'len()' function do in Python?",
+      "code": null,
+      "options": [
+        "Returns the length of an object",
+        "Returns the last element",
+        "Returns the data type",
+        "Returns the memory address"
+      ],
+      "correct": 0,
+      "explanation": "len() returns the number of items in a container or characters in a string."
+    },
+    {
+      "id": "py_low_006",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "x = 10\ny = 3\nprint(x % y)",
+      "options": ["3", "1", "3.33", "0"],
+      "correct": 1,
+      "explanation": "The % operator returns the remainder: 10 % 3 = 1."
+    },
+    {
+      "id": "py_low_007",
+      "type": "fill_blank",
+      "question": "Fill in the blank to create a dictionary:",
+      "code": "person = ___('name': 'Ali', 'age': 25)",
+      "options": ["{", "[", "(", "<"],
+      "correct": 0,
+      "explanation": "Dictionaries use curly braces {} in Python."
+    },
+    {
+      "id": "py_low_008",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "fruits = ['apple', 'banana', 'cherry']\nfruits.append('date')\nprint(len(fruits))",
+      "options": ["3", "4", "5", "Error"],
+      "correct": 1,
+      "explanation": "append() adds one element, so the list goes from 3 to 4 items."
+    },
+    {
+      "id": "py_low_009",
+      "type": "bug",
+      "question": "What is the bug in this code?",
+      "code": "numbers = [1, 2, 3, 4, 5]\nfor i in range(len(numbers)):\n    if numbers[i] % 2 == 0\n        print(numbers[i])",
+      "options": [
+        "Missing colon after if condition",
+        "range() is used incorrectly",
+        "% operator doesn't work on lists",
+        "No error"
+      ],
+      "correct": 0,
+      "explanation": "Python requires a colon : at the end of if statements."
+    },
+    {
+      "id": "py_low_010",
+      "type": "concept",
+      "question": "What is the correct way to start a comment in Python?",
+      "code": null,
+      "options": ["#", "//", "/*", "--"],
+      "correct": 0,
+      "explanation": "Python uses # for single-line comments."
+    },
+    {
+      "id": "py_low_011",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "x = 'hello'\nprint(x.upper())",
+      "options": ["hello", "HELLO", "Hello", "Error"],
+      "correct": 1,
+      "explanation": "The upper() method converts all characters to uppercase."
+    },
+    {
+      "id": "py_low_012",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "a = True\nb = False\nprint(a and b)",
+      "options": ["True", "False", "None", "Error"],
+      "correct": 1,
+      "explanation": "True AND False = False. Both must be True for 'and' to return True."
+    },
+    {
+      "id": "py_low_013",
+      "type": "concept",
+      "question": "Which keyword is used to define a function in Python?",
+      "code": null,
+      "options": ["func", "function", "def", "define"],
+      "correct": 2,
+      "explanation": "Python uses 'def' keyword to define functions."
+    },
+    {
+      "id": "py_low_014",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "x = [1, 2, 3]\ny = x\ny.append(4)\nprint(x)",
+      "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "[4]", "Error"],
+      "correct": 1,
+      "explanation": "y = x makes y reference the same list. Modifying y also modifies x."
+    },
+    {
+      "id": "py_low_015",
+      "type": "fill_blank",
+      "question": "Fill in the blank to handle an exception:",
+      "code": "try:\n    x = 1 / 0\n___ ZeroDivisionError:\n    print('Cannot divide by zero')",
+      "options": ["except", "catch", "handle", "error"],
+      "correct": 0,
+      "explanation": "Python uses 'except' keyword to catch exceptions in try/except blocks."
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "technology": "personality",
+  "level": "low",
+  "questions": [
+    {
+      "id": "pers_001",
+      "type": "situational",
+      "question": "You are working on a project with a tight deadline, and a team member is falling behind on their tasks. What do you do?",
+      "code": null,
+      "options": [
+        "Ignore it and focus only on your own tasks to ensure you finish on time.",
+        "Complain to the manager about the team member's slow progress.",
+        "Reach out to the team member privately, ask if they are facing blockers, and offer to help if possible.",
+        "Take over their work without telling them so the project doesn't fail."
+      ],
+      "correct": 2,
+      "explanation": "Offering help privately fosters teamwork and directly addresses the blocker without unnecessary escalation."
+    },
+    {
+      "id": "pers_002",
+      "type": "situational",
+      "question": "A client requests a major feature change just days before the scheduled release. How do you handle it?",
+      "code": null,
+      "options": [
+        "Tell the client it's impossible and refuse to make the change.",
+        "Acknowledge the request, assess the impact on the timeline and budget, and present the trade-offs to the client and manager.",
+        "Work overtime in secret to try and squeeze the feature in without telling anyone.",
+        "Implement the change but delay the release indefinitely until it's done."
+      ],
+      "correct": 1,
+      "explanation": "Professionalism requires assessing impact and communicating trade-offs rather than flatly refusing or working in secret."
+    },
+    {
+      "id": "pers_003",
+      "type": "situational",
+      "question": "You discover a critical bug in the code you just deployed to production, but nobody else has noticed it yet. What is your next step?",
+      "code": null,
+      "options": [
+        "Quietly fix it over the weekend so nobody finds out.",
+        "Immediately notify your team and manager, explain the impact, and propose a rollback or hotfix plan.",
+        "Wait to see if any users actually complain about it before taking action.",
+        "Blame the QA team for not catching it during testing."
+      ],
+      "correct": 1,
+      "explanation": "Transparency and swift communication are key to resolving production issues effectively."
+    },
+    {
+      "id": "pers_004",
+      "type": "situational",
+      "question": "You have two high-priority tasks assigned to you by two different managers, and both are due by the end of the day. You cannot complete both. What do you do?",
+      "code": null,
+      "options": [
+        "Pick the one you like doing the most and ignore the other.",
+        "Work on both at the same time, delivering rushed and low-quality work for both.",
+        "Bring the two managers together (or email them both) to explain the conflict and ask them to prioritize which task takes precedence.",
+        "Clock out at 5 PM regardless of what is finished."
+      ],
+      "correct": 2,
+      "explanation": "Communicating priority conflicts to management ensures expectations are aligned and business needs are met."
+    },
+    {
+      "id": "pers_005",
+      "type": "situational",
+      "question": "During a team meeting, a colleague presents an idea that you strongly disagree with. How do you respond?",
+      "code": null,
+      "options": [
+        "Interrupt them immediately to explain why their idea won't work.",
+        "Say nothing during the meeting, but complain about it to other coworkers later.",
+        "Wait for them to finish, acknowledge the merits of their idea, and respectfully present your alternative perspective with evidence.",
+        "Agree with them just to avoid conflict, even though you know it's a bad idea."
+      ],
+      "correct": 2,
+      "explanation": "Constructive, respectful feedback after listening creates a healthy collaborative environment."
+    },
+    {
+      "id": "pers_006",
+      "type": "situational",
+      "question": "You are assigned a task using a tool or technology you have never used before. How do you proceed?",
+      "code": null,
+      "options": [
+        "Refuse the task because you weren't trained for it.",
+        "Accept the task, spend some time reading the documentation, and ask a knowledgeable colleague for a brief overview if you get stuck.",
+        "Guess how it works and hope for the best.",
+        "Spend weeks trying to master the tool before starting the actual task."
+      ],
+      "correct": 1,
+      "explanation": "Taking initiative to learn while knowing when to ask for help demonstrates resourcefulness."
+    },
+    {
+      "id": "pers_007",
+      "type": "situational",
+      "question": "You receive negative feedback from your manager regarding a recent presentation you gave. What is your reaction?",
+      "code": null,
+      "options": [
+        "Get defensive and explain why they are wrong.",
+        "Feel demotivated and stop putting effort into future presentations.",
+        "Listen carefully, ask clarifying questions to understand how you can improve, and apply the feedback next time.",
+        "Blame the audience for not understanding your presentation."
+      ],
+      "correct": 2,
+      "explanation": "Receiving feedback constructively shows a growth mindset and professionalism."
+    },
+    {
+      "id": "pers_008",
+      "type": "situational",
+      "question": "Your team is adopting a new workflow process that you think is less efficient than the old one. What should you do?",
+      "code": null,
+      "options": [
+        "Continue using the old process secretly.",
+        "Give the new process a fair try, gather objective data on its inefficiencies, and present your findings constructively to the team.",
+        "Complain loudly in team chats about how terrible the new process is.",
+        "Quit the team."
+      ],
+      "correct": 1,
+      "explanation": "Providing data-driven, constructive feedback is much more productive than silent rebellion or loud complaining."
+    },
+    {
+      "id": "pers_009",
+      "type": "situational",
+      "question": "A coworker frequently interrupts you while you are doing deep, focused work. How do you handle it?",
+      "code": null,
+      "options": [
+        "Yell at them to leave you alone.",
+        "Politely explain that you are in the middle of focused work and ask if you can catch up with them at a specific time later.",
+        "Put on headphones and completely ignore them when they speak to you.",
+        "Stop what you are doing every time and let your own work suffer."
+      ],
+      "correct": 1,
+      "explanation": "Setting polite but firm boundaries ensures both communication and productivity are maintained."
+    },
+    {
+      "id": "pers_010",
+      "type": "situational",
+      "question": "You notice that a process your team uses daily is highly repetitive and prone to human error. What is your approach?",
+      "code": null,
+      "options": [
+        "Accept that this is just how things are done here.",
+        "Research a way to automate or streamline the process, create a small proof-of-concept, and present it to your manager.",
+        "Refuse to do the process until someone else fixes it.",
+        "Complain to HR about the working conditions."
+      ],
+      "correct": 1,
+      "explanation": "Proactively solving inefficiencies demonstrates value and technical leadership."
+    }
+  ]
+}

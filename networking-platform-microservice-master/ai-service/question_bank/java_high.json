@@ -1,0 +1,186 @@
+{
+  "technology": "java",
+  "level": "high",
+  "questions": [
+    {
+      "id": "java_high_001",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);\nint sum = list.stream()\n    .filter(n -> n % 2 == 0)\n    .mapToInt(Integer::intValue)\n    .sum();\nSystem.out.println(sum);",
+      "options": ["6", "9", "15", "2"],
+      "correct": 0,
+      "explanation": "Filter keeps even numbers (2, 4), then sum = 2 + 4 = 6."
+    },
+    {
+      "id": "java_high_002",
+      "type": "concept",
+      "question": "What is the purpose of the 'volatile' keyword in Java?",
+      "code": null,
+      "options": [
+        "Ensures variable reads/writes go directly to main memory, visible to all threads",
+        "Makes a variable constant",
+        "Prevents garbage collection",
+        "Makes the variable thread-local"
+      ],
+      "correct": 0,
+      "explanation": "volatile ensures visibility across threads by bypassing CPU caches."
+    },
+    {
+      "id": "java_high_003",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "Optional<String> opt = Optional.of(\"Hello\");\nString result = opt.map(String::toUpperCase)\n    .orElse(\"DEFAULT\");\nSystem.out.println(result);",
+      "options": ["Hello", "HELLO", "DEFAULT", "null"],
+      "correct": 1,
+      "explanation": "Optional contains \"Hello\", map transforms it to \"HELLO\". orElse is not used since value exists."
+    },
+    {
+      "id": "java_high_004",
+      "type": "bug",
+      "question": "What is the issue with this singleton implementation?",
+      "code": "public class Singleton {\n    private static Singleton instance;\n    private Singleton() {}\n    public static Singleton getInstance() {\n        if (instance == null) {\n            instance = new Singleton();\n        }\n        return instance;\n    }\n}",
+      "options": [
+        "Not thread-safe: two threads could create separate instances",
+        "Constructor should be public",
+        "Instance should be final",
+        "No issue, this is correct"
+      ],
+      "correct": 0,
+      "explanation": "Without synchronization, two threads could pass the null check simultaneously and create two instances."
+    },
+    {
+      "id": "java_high_005",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "Map<String, Integer> map = new HashMap<>();\nmap.put(\"a\", 1);\nmap.put(\"b\", 2);\nmap.merge(\"a\", 10, Integer::sum);\nmap.merge(\"c\", 5, Integer::sum);\nSystem.out.println(map);",
+      "options": [
+        "{a=11, b=2, c=5}",
+        "{a=10, b=2, c=5}",
+        "{a=1, b=2, c=5}",
+        "Error"
+      ],
+      "correct": 0,
+      "explanation": "merge: if key exists, apply function (1+10=11). If not, insert value (c=5)."
+    },
+    {
+      "id": "java_high_006",
+      "type": "concept",
+      "question": "What is the difference between CompletableFuture.supplyAsync() and CompletableFuture.runAsync()?",
+      "code": null,
+      "options": [
+        "supplyAsync returns a value (Supplier), runAsync does not (Runnable)",
+        "They are identical",
+        "runAsync is synchronous, supplyAsync is async",
+        "supplyAsync is deprecated"
+      ],
+      "correct": 0,
+      "explanation": "supplyAsync takes a Supplier<T> and returns CompletableFuture<T>. runAsync takes a Runnable and returns CompletableFuture<Void>."
+    },
+    {
+      "id": "java_high_007",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "record Point(int x, int y) {}\n\nPoint p1 = new Point(1, 2);\nPoint p2 = new Point(1, 2);\nSystem.out.println(p1.equals(p2));\nSystem.out.println(p1 == p2);",
+      "options": [
+        "true then true",
+        "true then false",
+        "false then false",
+        "false then true"
+      ],
+      "correct": 1,
+      "explanation": "Records auto-generate equals() based on components (true). == compares references (false, different objects)."
+    },
+    {
+      "id": "java_high_008",
+      "type": "concept",
+      "question": "What does @Transactional(propagation = Propagation.REQUIRES_NEW) do in Spring?",
+      "code": null,
+      "options": [
+        "Suspends the current transaction and creates a new independent one",
+        "Joins the existing transaction",
+        "Throws an error if a transaction exists",
+        "Makes the method non-transactional"
+      ],
+      "correct": 0,
+      "explanation": "REQUIRES_NEW always creates a new transaction, suspending any existing one until the new one completes."
+    },
+    {
+      "id": "java_high_009",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "interface Printable {\n    default void print() {\n        System.out.print(\"Printable \");\n    }\n}\ninterface Showable {\n    default void print() {\n        System.out.print(\"Showable \");\n    }\n}\nclass Demo implements Printable, Showable {\n    public void print() {\n        Printable.super.print();\n        Showable.super.print();\n    }\n}\nnew Demo().print();",
+      "options": ["Printable Showable", "Error: ambiguous", "Printable", "Showable"],
+      "correct": 0,
+      "explanation": "Diamond problem resolved by explicitly calling both super methods via InterfaceName.super.method()."
+    },
+    {
+      "id": "java_high_010",
+      "type": "fill_blank",
+      "question": "Fill in the blank to create a functional interface:",
+      "code": "@___\npublic interface Calculator {\n    int calculate(int a, int b);\n}",
+      "options": ["FunctionalInterface", "Lambda", "Override", "Interface"],
+      "correct": 0,
+      "explanation": "@FunctionalInterface ensures the interface has exactly one abstract method, enabling lambda usage."
+    },
+    {
+      "id": "java_high_011",
+      "type": "concept",
+      "question": "What is the purpose of the 'sealed' keyword in Java 17+?",
+      "code": null,
+      "options": [
+        "Restricts which classes can extend/implement a class/interface",
+        "Makes a class immutable",
+        "Prevents method overriding",
+        "Encrypts class data"
+      ],
+      "correct": 0,
+      "explanation": "Sealed classes/interfaces use 'permits' to explicitly list allowed subclasses, enabling exhaustive pattern matching."
+    },
+    {
+      "id": "java_high_012",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "String text = \"\"\"\n    Hello\n    World\n    \"\"\";\nSystem.out.println(text.strip().lines().count());",
+      "options": ["1", "2", "3", "0"],
+      "correct": 1,
+      "explanation": "Text block contains 'Hello' and 'World' on separate lines. strip() removes surrounding whitespace. lines() splits by line breaks: 2 lines."
+    },
+    {
+      "id": "java_high_013",
+      "type": "bug",
+      "question": "What is the issue with this code?",
+      "code": "ConcurrentHashMap<String, Integer> map = new ConcurrentHashMap<>();\nmap.put(\"count\", 0);\n\n// Called from multiple threads\npublic void increment() {\n    int current = map.get(\"count\");\n    map.put(\"count\", current + 1);\n}",
+      "options": [
+        "Race condition: get+put is not atomic. Should use map.merge() or compute()",
+        "ConcurrentHashMap doesn't support Integer values",
+        "put() is not thread-safe in ConcurrentHashMap",
+        "No issue, ConcurrentHashMap handles this"
+      ],
+      "correct": 0,
+      "explanation": "Individual operations are thread-safe, but get-then-put as a compound action is not. Use map.merge(\"count\", 1, Integer::sum)."
+    },
+    {
+      "id": "java_high_014",
+      "type": "concept",
+      "question": "What problem does the 'happens-before' relationship solve in Java's memory model?",
+      "code": null,
+      "options": [
+        "Guarantees that memory writes by one thread are visible to other threads in a defined order",
+        "Ensures methods execute in order of declaration",
+        "Prevents deadlocks",
+        "Orders constructor calls"
+      ],
+      "correct": 0,
+      "explanation": "Happens-before defines visibility guarantees: if action A happens-before B, then A's memory effects are visible to B."
+    },
+    {
+      "id": "java_high_015",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "var list = List.of(1, 2, 3, 4, 5);\nvar result = list.stream()\n    .collect(Collectors.partitioningBy(n -> n > 3));\nSystem.out.println(result.get(true));",
+      "options": ["[4, 5]", "[1, 2, 3]", "[3, 4, 5]", "Error"],
+      "correct": 0,
+      "explanation": "partitioningBy splits into true/false groups. Elements > 3 are [4, 5]."
+    }
+  ]
+}

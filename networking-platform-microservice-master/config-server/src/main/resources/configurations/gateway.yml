@@ -1,0 +1,37 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+server:
+  port: 8000
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      default-filters:
+        - AuthenticationFilter
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedHeaders:
+              - "*"
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
+              - PUT
+              - OPTIONS
+              - PATCH
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+jwt:
+  secret: mysupersecretkeymysupersecretkeymysupersecretkey

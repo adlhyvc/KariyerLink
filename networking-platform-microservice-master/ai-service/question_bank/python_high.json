@@ -1,0 +1,191 @@
+{
+  "technology": "python",
+  "level": "high",
+  "questions": [
+    {
+      "id": "py_high_001",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "def make_adder(n):\n    def adder(x):\n        return x + n\n    return adder\n\nadd5 = make_adder(5)\nprint(add5(3))",
+      "options": ["5", "3", "8", "Error"],
+      "correct": 2,
+      "explanation": "Closure: make_adder returns adder which captures n=5. add5(3) = 3 + 5 = 8."
+    },
+    {
+      "id": "py_high_002",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "from collections import defaultdict\n\nd = defaultdict(list)\nd['a'].append(1)\nd['a'].append(2)\nd['b'].append(3)\nprint(dict(d))",
+      "options": [
+        "{'a': [1, 2], 'b': [3]}",
+        "{'a': 2, 'b': 3}",
+        "Error",
+        "{'a': [2], 'b': [3]}"
+      ],
+      "correct": 0,
+      "explanation": "defaultdict(list) creates empty lists for missing keys. Each append adds to the list."
+    },
+    {
+      "id": "py_high_003",
+      "type": "concept",
+      "question": "What is a Python decorator?",
+      "code": null,
+      "options": [
+        "A function that takes another function and extends its behavior",
+        "A class that decorates the UI",
+        "A special type of variable",
+        "A module for formatting strings"
+      ],
+      "correct": 0,
+      "explanation": "Decorators wrap functions to modify or extend their behavior using @decorator syntax."
+    },
+    {
+      "id": "py_high_004",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "gen = (x**2 for x in range(5))\nprint(list(gen))\nprint(list(gen))",
+      "options": [
+        "[0, 1, 4, 9, 16] then [0, 1, 4, 9, 16]",
+        "[0, 1, 4, 9, 16] then []",
+        "Error",
+        "[] then [0, 1, 4, 9, 16]"
+      ],
+      "correct": 1,
+      "explanation": "Generators are exhausted after one iteration. Second list(gen) returns empty."
+    },
+    {
+      "id": "py_high_005",
+      "type": "bug",
+      "question": "What is the issue with this code?",
+      "code": "class Counter:\n    count = 0\n    def __init__(self):\n        Counter.count += 1\n    def get_count(self):\n        return self.count\n\na = Counter()\nb = Counter()\nb.count = 99\nprint(a.get_count())",
+      "options": [
+        "a.get_count() returns 2 — b.count=99 creates an instance variable, not modifying the class variable",
+        "a.get_count() returns 99",
+        "a.get_count() returns 0",
+        "Error: count is not accessible"
+      ],
+      "correct": 0,
+      "explanation": "b.count=99 creates an instance attribute on b, shadowing the class variable. a.count still reads the class variable (2)."
+    },
+    {
+      "id": "py_high_006",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "import asyncio\n\nasync def greet():\n    return 'Hello'\n\nresult = greet()\nprint(type(result).__name__)",
+      "options": ["str", "coroutine", "function", "NoneType"],
+      "correct": 1,
+      "explanation": "Calling an async function without await returns a coroutine object, not the result."
+    },
+    {
+      "id": "py_high_007",
+      "type": "concept",
+      "question": "What does the GIL (Global Interpreter Lock) in CPython prevent?",
+      "code": null,
+      "options": [
+        "Multiple threads from executing Python bytecode simultaneously",
+        "Multiple processes from running",
+        "Importing external modules",
+        "Using global variables"
+      ],
+      "correct": 0,
+      "explanation": "The GIL ensures only one thread executes Python bytecode at a time, limiting true parallelism for CPU-bound tasks."
+    },
+    {
+      "id": "py_high_008",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "def func(a, b=[], c=None):\n    if c is None:\n        c = []\n    b.append(a)\n    c.append(a)\n    return b, c\n\nprint(func(1)[0])\nprint(func(2)[0])",
+      "options": [
+        "[1] then [2]",
+        "[1] then [1, 2]",
+        "[1, 2] then [1, 2]",
+        "Error"
+      ],
+      "correct": 1,
+      "explanation": "Default mutable arguments are shared across calls. b=[] is created once, so second call appends to the same list."
+    },
+    {
+      "id": "py_high_009",
+      "type": "concept",
+      "question": "What is the difference between __str__ and __repr__ in Python?",
+      "code": null,
+      "options": [
+        "__str__ is for end-user readable output; __repr__ is for unambiguous developer representation",
+        "They are identical",
+        "__repr__ is for end-users; __str__ is for developers",
+        "__str__ is deprecated in Python 3"
+      ],
+      "correct": 0,
+      "explanation": "__str__ aims for readability, __repr__ aims for unambiguity. repr() falls back to __repr__ if __str__ is not defined."
+    },
+    {
+      "id": "py_high_010",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "class Meta(type):\n    def __new__(mcs, name, bases, namespace):\n        namespace['greet'] = lambda self: f'Hello from {name}'\n        return super().__new__(mcs, name, bases, namespace)\n\nclass MyClass(metaclass=Meta):\n    pass\n\nobj = MyClass()\nprint(obj.greet())",
+      "options": ["Hello from Meta", "Hello from MyClass", "Error", "None"],
+      "correct": 1,
+      "explanation": "The metaclass injects a greet method using the class name. name='MyClass' when MyClass is created."
+    },
+    {
+      "id": "py_high_011",
+      "type": "fill_blank",
+      "question": "Fill in the blank to make this a context manager:",
+      "code": "class FileHandler:\n    def __init__(self, filename):\n        self.filename = filename\n    def __enter__(self):\n        self.file = open(self.filename)\n        return self.file\n    def ___(self, exc_type, exc_val, exc_tb):\n        self.file.close()\n        return False",
+      "options": ["__exit__", "__close__", "__del__", "__finally__"],
+      "correct": 0,
+      "explanation": "Context managers require __enter__ and __exit__ methods for the 'with' statement."
+    },
+    {
+      "id": "py_high_012",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "from functools import lru_cache\n\n@lru_cache(maxsize=None)\ndef fib(n):\n    if n < 2:\n        return n\n    return fib(n-1) + fib(n-2)\n\nprint(fib(10))",
+      "options": ["55", "89", "34", "10"],
+      "correct": 0,
+      "explanation": "Fibonacci with memoization: fib(10) = 55. lru_cache caches results for efficiency."
+    },
+    {
+      "id": "py_high_013",
+      "type": "concept",
+      "question": "What is the MRO (Method Resolution Order) in Python?",
+      "code": null,
+      "options": [
+        "The order in which base classes are searched when calling a method (C3 linearization)",
+        "The order in which methods are defined in a class",
+        "The order of method arguments",
+        "The order of import statements"
+      ],
+      "correct": 0,
+      "explanation": "MRO determines which method to call in a multiple-inheritance hierarchy using C3 linearization."
+    },
+    {
+      "id": "py_high_014",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "data = {'a': 1, 'b': 2, 'c': 3}\nresult = {v: k for k, v in data.items()}\nprint(result)",
+      "options": [
+        "{1: 'a', 2: 'b', 3: 'c'}",
+        "{'a': 1, 'b': 2, 'c': 3}",
+        "Error",
+        "{('a', 1), ('b', 2), ('c', 3)}"
+      ],
+      "correct": 0,
+      "explanation": "Dict comprehension swaps keys and values: {value: key for key, value in ...}."
+    },
+    {
+      "id": "py_high_015",
+      "type": "bug",
+      "question": "What is the issue with this concurrent code?",
+      "code": "import threading\n\ncounter = 0\n\ndef increment():\n    global counter\n    for _ in range(100000):\n        counter += 1\n\nthreads = [threading.Thread(target=increment) for _ in range(4)]\nfor t in threads: t.start()\nfor t in threads: t.join()\nprint(counter)",
+      "options": [
+        "Race condition: counter += 1 is not atomic, result will likely be less than 400000",
+        "No issue, will always print 400000",
+        "Deadlock will occur",
+        "Error: global keyword doesn't work with threads"
+      ],
+      "correct": 0,
+      "explanation": "counter += 1 involves read-modify-write which is not atomic. Multiple threads can read the same value before writing, causing lost updates."
+    }
+  ]
+}

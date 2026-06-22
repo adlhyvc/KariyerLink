@@ -1,0 +1,86 @@
+{
+    "login": {
+        "title": "Login",
+        "email": "E-Mail",
+        "password": "Password",
+        "buttonText": "Login",
+        "noAccount": "Don't have an account?",
+        "registerButtonText": "Register",
+        "successMessage": "Login successfully"
+    },
+    "register": {
+        "title": "Create an Account",
+        "firstNamePlaceholder": "First Name",
+        "lastNamePlaceholder": "Last Name",
+        "successMessage": "Account created successfully",
+        "email": "E-Mail",
+        "password": "Password",
+        "registerButtonText": "Register",
+        "haveAccount": "Already have an account?",
+        "loginButtonText": "Log In"
+    },
+    "companyPage": {
+        "aboutTab": "About",
+        "jobsTab": "Job Listings",
+        "workersTab": "Employees",
+        "createCompany": "Create Company",
+        "companyList": "Company List",
+        "shareJob": "Share Job",
+        "applications": "Applications",
+        "applicationList": "Application List",
+        "owner": "Owner"
+    },
+    "jobPage": {
+        "withdrawApplication": "Withdraw the application",
+        "apply": "Apply",
+        "recommendedJobs": "Recommended Jobs",
+        "jobs": "Jobs"
+    },
+    "profilePage": {
+        "postsTab": "Posts",
+        "aboutTab": "About",
+        "followersTab": "Followers",
+        "followingTab": "Following",
+        "follow": "Follow",
+        "unfollow": "Unfollow",
+        "messages": "Messages"
+    },
+    "links": {
+        "home": "Home",
+        "jobRecommendations": "Job Recommendations",
+        "jobs": "Jobs",
+        "toggleTheme": "Toggle Theme",
+        "companies": "Companies",
+        "profile": "Profile"
+    },
+    "post": {
+        "noComments": "No comments found",
+        "comments": "Comments",
+        "noPosts": "No post found",
+        "deletePost": "Are you sure you want to delete this post?"
+    },
+    "editPage": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "password": "Password",
+        "editProfile": "Edit profile",
+        "editPost": "Edit post"
+    },
+    "authMessage1": "Connect, Grow, Succeed",
+    "authMessage2": "Your Professional Network Starts Here.",
+    "email": "E-Mail",
+    "password": "Password",
+    "description": "Description",
+    "submit": "Submit",
+    "name": "Name",
+    "delete": "Delete",
+    "endDate": "End Date",
+    "send": "Send",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "sharePost": "Share Post",
+    "images": "Images",
+    "share": "Share",
+    "login/register": "Login / Register",
+    "me": "Me"
+}

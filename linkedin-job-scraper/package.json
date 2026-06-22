@@ -1,0 +1,20 @@
+{
+  "name": "linkedin-job-scraper",
+  "version": "1.0.0",
+  "description": "LinkedIn job scraper for CS/SE job listings",
+  "main": "dist/run.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "ts-node src/run.ts",
+    "scrape": "ts-node src/run.ts"
+  },
+  "dependencies": {
+    "linkedin-jobs-scraper": "^3.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.0.0"
+  }
+}

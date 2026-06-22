@@ -1,0 +1,161 @@
+{
+  "technology": "java",
+  "level": "low",
+  "questions": [
+    {
+      "id": "java_low_001",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "String s = \"Hello\";\nSystem.out.println(s.length());",
+      "options": ["4", "5", "6", "Error"],
+      "correct": 1,
+      "explanation": "\"Hello\" has 5 characters. length() returns the number of characters."
+    },
+    {
+      "id": "java_low_002",
+      "type": "concept",
+      "question": "Which keyword is used to create a new object in Java?",
+      "code": null,
+      "options": ["create", "new", "init", "make"],
+      "correct": 1,
+      "explanation": "The 'new' keyword allocates memory and creates an instance of a class."
+    },
+    {
+      "id": "java_low_003",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "int[] arr = {10, 20, 30};\nSystem.out.println(arr[1]);",
+      "options": ["10", "20", "30", "Error"],
+      "correct": 1,
+      "explanation": "Arrays are 0-indexed. arr[1] is the second element, which is 20."
+    },
+    {
+      "id": "java_low_004",
+      "type": "bug",
+      "question": "What is wrong with this code?",
+      "code": "public class Main {\n    public static void main(String[] args) {\n        int x = 5;\n        if (x = 10) {\n            System.out.println(\"Ten\");\n        }\n    }\n}",
+      "options": [
+        "Assignment (=) used instead of comparison (==) in if condition",
+        "Missing semicolon",
+        "x should be declared as Integer",
+        "No error"
+      ],
+      "correct": 0,
+      "explanation": "In Java, = is assignment and == is comparison. if(x = 10) tries to assign, which doesn't return boolean."
+    },
+    {
+      "id": "java_low_005",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "String a = \"hello\";\nString b = \"hello\";\nSystem.out.println(a == b);",
+      "options": ["true", "false", "Error", "null"],
+      "correct": 0,
+      "explanation": "String literals are interned in Java. Both a and b reference the same object in the string pool."
+    },
+    {
+      "id": "java_low_006",
+      "type": "concept",
+      "question": "What is the purpose of the 'static' keyword in Java?",
+      "code": null,
+      "options": [
+        "Makes a member belong to the class rather than an instance",
+        "Makes a variable constant",
+        "Prevents inheritance",
+        "Makes a class abstract"
+      ],
+      "correct": 0,
+      "explanation": "Static members belong to the class itself, shared among all instances."
+    },
+    {
+      "id": "java_low_007",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "for (int i = 0; i < 5; i++) {\n    if (i == 3) break;\n    System.out.print(i + \" \");\n}",
+      "options": ["0 1 2 3", "0 1 2", "0 1 2 3 4", "1 2 3"],
+      "correct": 1,
+      "explanation": "The loop breaks when i==3, so it prints 0, 1, 2 and stops."
+    },
+    {
+      "id": "java_low_008",
+      "type": "fill_blank",
+      "question": "Fill in the blank to catch an exception:",
+      "code": "try {\n    int result = 10 / 0;\n} ___ (ArithmeticException e) {\n    System.out.println(\"Error!\");\n}",
+      "options": ["catch", "except", "handle", "error"],
+      "correct": 0,
+      "explanation": "Java uses try/catch blocks for exception handling."
+    },
+    {
+      "id": "java_low_009",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "int x = 7;\nSystem.out.println(x % 2 == 0 ? \"Even\" : \"Odd\");",
+      "options": ["Even", "Odd", "7", "Error"],
+      "correct": 1,
+      "explanation": "7 % 2 = 1, which is != 0, so the ternary operator returns \"Odd\"."
+    },
+    {
+      "id": "java_low_010",
+      "type": "concept",
+      "question": "What is the difference between 'int' and 'Integer' in Java?",
+      "code": null,
+      "options": [
+        "int is a primitive type, Integer is a wrapper class",
+        "They are identical",
+        "Integer is faster than int",
+        "int can be null, Integer cannot"
+      ],
+      "correct": 0,
+      "explanation": "int is a primitive (no methods, cannot be null). Integer is an object wrapper for int."
+    },
+    {
+      "id": "java_low_011",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "ArrayList<String> list = new ArrayList<>();\nlist.add(\"A\");\nlist.add(\"B\");\nlist.add(\"C\");\nlist.remove(1);\nSystem.out.println(list);",
+      "options": ["[A, C]", "[B, C]", "[A, B]", "Error"],
+      "correct": 0,
+      "explanation": "remove(1) removes the element at index 1 (\"B\"), leaving [A, C]."
+    },
+    {
+      "id": "java_low_012",
+      "type": "concept",
+      "question": "Which access modifier makes a member visible only within its own class?",
+      "code": null,
+      "options": ["public", "protected", "private", "default"],
+      "correct": 2,
+      "explanation": "private restricts access to the declaring class only."
+    },
+    {
+      "id": "java_low_013",
+      "type": "output",
+      "question": "What will the following code print?",
+      "code": "String s = \"Java\";\ns.concat(\" Programming\");\nSystem.out.println(s);",
+      "options": ["Java Programming", "Java", "Programming", "Error"],
+      "correct": 1,
+      "explanation": "Strings are immutable. concat() returns a new String but s still references \"Java\"."
+    },
+    {
+      "id": "java_low_014",
+      "type": "bug",
+      "question": "What is the issue with this code?",
+      "code": "int[] numbers = new int[5];\nfor (int i = 0; i <= 5; i++) {\n    numbers[i] = i * 2;\n}",
+      "options": [
+        "ArrayIndexOutOfBoundsException: i<=5 should be i<5",
+        "Wrong array initialization",
+        "Cannot multiply int by 2",
+        "No error"
+      ],
+      "correct": 0,
+      "explanation": "Array has indices 0-4 but loop goes to i=5, causing ArrayIndexOutOfBoundsException."
+    },
+    {
+      "id": "java_low_015",
+      "type": "fill_blank",
+      "question": "Fill in the blank to inherit from a parent class:",
+      "code": "public class Dog ___ Animal {\n    // ...\n}",
+      "options": ["extends", "implements", "inherits", "super"],
+      "correct": 0,
+      "explanation": "Java uses 'extends' keyword for class inheritance."
+    }
+  ]
+}
